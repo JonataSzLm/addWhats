@@ -1,0 +1,549 @@
+:root {
+    --color-main: #00A783;
+    --color-sec: #008069;
+    --color-bkgd: #E0DFDD;
+    --color-bk2: #F0F2F5;
+    --font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
+    --position-modal: -500px;
+}
+
+body {
+    background-color: var(--color-bkgd);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-top: 74px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.faixa {
+    background-color: var(--color-main);
+    width: 100%;
+    height: 127px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.container {
+    width: 80%;
+    height: 80%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.send, .history {
+    background-color: var(--color-bk2);
+    width: 49%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    box-shadow: 0 0 .5em gray;
+    border-radius: 5px;
+}
+
+.send {
+    margin-right: 2%;
+}
+
+.top {
+    width: 100%;
+    min-height: 53px;
+    background-color: var(--color-sec);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+.top label {
+    width: 25px;
+    margin: 0 5%;
+    cursor: pointer;
+}
+#icon-config {
+    width: 100%;
+    transition: transform 1s;
+}
+.btn-config-animate {
+    transform: rotate(120deg);
+}
+#icon-info {
+    height: 25px;
+    margin: 0 5%;
+    cursor: pointer;
+}
+.top h2 {
+    margin: 0 5%;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.content form {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 70px;
+    border-bottom: 5%;
+}
+
+.div-numero {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.content input, .content select {
+    border-radius: 25px;
+    height: 40px;
+    margin-top: 5%;
+    font-size: 20px;
+    background-color: white;
+    box-shadow: 0 0 .2em black;
+    border: none;
+    /*border: 2px solid var(--color-sec);*/
+}
+
+#nome {
+    width: 88.5%;
+    padding: 0 5%;
+}
+#ddi {
+    width: 25%;
+    text-align: center;
+}
+#ddd {
+    width: 12%;
+    padding: 0 5%;
+}
+#tel {
+    width: 35%;
+    padding: 0 5%;
+}
+#btn-enviar {
+    padding: 2% 5%;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--color-sec);
+}
+#btn-enviar:hover {
+    border: 2px solid var(--color-sec);
+    background-color: white;
+    color: var(--color-sec);
+    cursor: pointer;
+}
+
+#WebWhatsapp, #PCWhatsapp {
+    display: none;
+}
+.div-radio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.btn-radio {
+    /*border: 2px solid var(--color-sec);*/
+    box-shadow: 0 0 .2em black;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.div-radio p {
+    margin: 5px 15px;
+    font-weight: bold;
+    color: var(--color-sec);
+}
+.div-radio input[type=radio]:checked + label .btn-radio{
+    background-color: var(--color-sec);
+}
+.div-radio label {
+    cursor: pointer;
+}
+
+.contacts {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-main) white;
+}
+.div-contact, .result {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+    max-height: 100px;
+    border-bottom: rgb(226, 212, 212) solid 1px;
+}
+.div-contact:hover, .result:hover {
+    background-color: #e0ebeb;
+    transform: scale(1.01);
+    cursor: pointer;
+    padding-left: 5px;
+}
+.text-contact {
+    width: 90%;
+    margin: auto 0;
+}
+.icon-contact {
+    width: 6%;
+    margin: 0 2%;
+}
+.icon-contact:hover {
+    transform: scale(1.1);
+}
+.text-contact h3 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.text-contact p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.menu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    /*transform: scaleY(0);
+    height: 0;
+    opacity: 0;*/
+}
+.show-menu {
+    animation: stretch 2s ease-out forwards;
+}
+
+.invisivel {
+    display: none;
+    transform: translateX(5000px);
+}
+
+.div-btn {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+
+.btn-red, .btn-green {
+    text-align: center;
+    background-color: var(--color-bk2);
+    border: none;
+    box-shadow: 0 0 .2em black;
+    border-radius: 15px;
+    width: 30%;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0;
+}
+.btn-green {
+    fill: var(--color-sec);
+    color: var(--color-sec);
+}
+.btn-green:hover {
+    fill: white;
+    color: white;
+    background-color: var(--color-sec);
+    cursor: pointer;
+}
+.btn-red {
+    fill: rgba(255, 0, 0, 0.804);
+    color: rgba(255, 0, 0, 0.804);
+}
+.btn-red:hover {
+    fill: white;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.804);
+    cursor: pointer;
+}
+.div-btn p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.div-btn svg {
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.div-src svg{
+    width: 22px;
+}
+.div-src {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 10px 0;
+    justify-content: space-between;
+    box-shadow: 0 0 .2em black;
+    border-radius: 10px;
+}
+.div-src input {
+    width: 93%;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    margin: 0;
+    padding: 5px 15px;
+    background-color: var(--color-bk2);
+}
+.div-src button {
+    padding: 5px;
+    width: 15%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--color-bk2);
+    fill: var(--color-sec);
+}
+.div-src button:hover {
+    /*fill: white;
+    background-color: var(--color-sec);*/
+    cursor: pointer;
+}
+
+.modal-clear {
+    transition: transform 1s;
+    transform: translateY(-500px);
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    width: 30%;
+    top: 25%;
+    box-shadow: 0 0 1em black;
+    border-radius: 15px;
+    padding: 15px 0;
+}
+.top-modal {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid var(--color-bkgd);
+}
+.top-modal img {
+    width: 20px;
+}
+.top-modal img:hover {
+    cursor: pointer;
+}
+.modal-clear button {
+    min-height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    min-width: 150px;
+    background-color: white;
+}
+
+
+.contacts::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+.contacts::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+  }
+  
+.contacts::-webkit-scrollbar-thumb {
+    background-color: var(--color-sec);    /* color of the scroll thumb */
+    border-radius: 15px;       /* roundness of the scroll thumb */
+    border: 3px solid white;  /* creates padding around scroll thumb */
+}
+
+.contacts h2 {
+    text-align: center;
+    margin: 2% 20px 3% 20px;
+    font-size: 20px;
+    color: var(--color-sec);
+}
+.img-empty {
+    width: 40%;
+    margin: 0;
+    padding: 0;
+}
+.text-contact span {
+    font-size: 20px;
+}
+
+.menu-info {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    width: 10%;
+    left: 39%;
+    top: 127px;
+    box-shadow: 0 0 .3em black;
+    border-radius: 0px 0px 10px 10px;
+    text-align: end;
+    padding: 1px;
+    padding-bottom: 10px;
+}
+.menu-info p {
+    border-top: 1px solid var(--color-bkgd);
+    margin: 0;
+    padding: 10px 5px;
+}
+.menu-info p:hover {
+    background-color: var(--color-bkgd);
+}
+.menu-info input[type=checkbox] {
+    border: 0;
+    background-color: transparent;
+    color: black;
+}
+.show-info {
+    display: block;
+}
+.info-2 {
+    left: 58%;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        overflow: auto;
+        min-height: 150vh;
+        padding-top: 74px;
+    }
+    .trava {
+        overflow: hidden !important;
+    }
+    .container {
+        height: 42.5%;
+        width: 85%;
+    }
+    .send, .history {
+        width: 100%;
+        height: auto;
+    }
+    .send {
+        margin-right: 0;
+        margin-bottom: 2%;
+    }
+    .history {
+        max-height: 650px;
+        min-height: 300px;
+    }
+    .top {
+        height: 59px;
+    }
+    .content {
+        padding: 20px 0;
+    }
+    #ddi, #ddd, #tel {
+        width: 100%;
+    }
+    .icon-contact {
+        width: 10%;
+    }
+    .modal-clear {
+        width: 75%;
+        top: 75%;
+        transform: translateY(calc(var(--position-modal) * 2));
+    }
+    .menu-info {
+        left: 55%;
+        width: 35%;
+    }
+}
+
+@keyframes stretch {
+    75% {
+        height: auto;
+    }
+    100% {
+        opacity: 1;
+        height: auto;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes delete {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
+@keyframes error {
+    40% {
+        transform: translateX(-15px);
+    }
+    70% {
+        transform: translateX(15px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
