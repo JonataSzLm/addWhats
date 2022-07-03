@@ -320,5 +320,5 @@ async function loadFile(file) {
         }  
     })
 
-	//document.location.reload(true)
+	document.location.reload(true)
 }
