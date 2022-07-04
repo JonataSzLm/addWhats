@@ -10,6 +10,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src='main.js'></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8528902803022160"
+     crossorigin="anonymous"></script>
 </head>
 <body onload="geraPagina()" id="body">
     <div class="faixa"></div>

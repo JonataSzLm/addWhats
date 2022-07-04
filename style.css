@@ -77,10 +77,10 @@ body {
 }
 #icon-config {
     width: 100%;
-    transition: transform 1s;
+    transition: transform .8s;
 }
 .btn-config-animate {
-    transform: rotate(120deg);
+    transform: rotate(30deg);
 }
 #icon-info {
     height: 25px;
