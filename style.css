@@ -134,6 +134,7 @@ body {
     background-color: white;
     box-shadow: 0 0 .2em black;
     border: none;
+    outline: none;
     /*border: 2px solid var(--color-sec);*/
 }
 
